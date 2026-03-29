@@ -3,7 +3,7 @@
 Right-click any video on a webpage and open it in VLC, or add it to VLC's playlist.
 
 ## Features
-- Smart URL extraction for YouTube, Vimeo, Twitch, Twitter/X, Reddit, and generic sites
+- Smart URL extraction for Vimeo, Twitter/X, Reddit, and generic sites
 - "Watch in VLC" — launches VLC with the video
 - "Add to VLC playlist" — queues video into an already-running VLC without interrupting playback
 
