@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 280px;
+      background: #1a1a2e;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #FF6B00 0%, #e05500 100%);
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .vlc-cone {
+      flex-shrink: 0;
+    }
+
+    .header-text h1 {
+      font-size: 15px;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 0.3px;
+    }
+
+    .header-text p {
+      font-size: 11px;
+      color: rgba(255,255,255,0.75);
+      margin-top: 2px;
+    }
+
+    .content {
+      padding: 16px 18px;
+    }
+
+    .instruction {
+      background: #0d0d1a;
+      border: 1px solid #2a2a40;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 14px;
+    }
+
+    .instruction .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .instruction .step:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-num {
+      background: #FF6B00;
+      color: white;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .step-text {
+      font-size: 12px;
+      color: #aaa;
+      line-height: 1.5;
+    }
+
+    .step-text strong {
+      color: #ddd;
+    }
+
+    .btn-open {
+      width: 100%;
+      background: linear-gradient(135deg, #FF6B00, #FF8C00);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 11px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: opacity 0.15s;
+      margin-bottom: 10px;
+    }
+
+    .btn-open:hover { opacity: 0.85; }
+
+    .tip {
+      font-size: 10px;
+      color: #555;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .tip a {
+      color: #FF6B00;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <svg class="vlc-cone" width="36" height="36" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="10,5 90,5 100,20 50,95 0,20" fill="white" fill-opacity="0.9"/>
+      <polygon points="20,20 80,20 85,30 50,80 15,30" fill="#FF8C00"/>
+      <polygon points="30,32 70,32 65,42 50,65 35,42" fill="white"/>
+    </svg>
+    <div class="header-text">
+      <h1>Watch in VLC</h1>
+      <p>Stream any video in VLC Player</p>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="instruction">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text"><strong>Right-click</strong> any video on a webpage</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">Select <strong>"▶ Watch in VLC"</strong> from the context menu</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">VLC will open and start playing — works with <strong>YouTube</strong>, HTML5 video, and more</div>
+      </div>
+    </div>
+
+    <button class="btn-open" id="openCurrentVideo">
+      ▶ Open current page video in VLC
+    </button>
+
+    <div class="tip">
+      VLC must be installed. If it doesn't launch,<br>
+      use <strong>File → Open Network Stream</strong> in VLC.
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

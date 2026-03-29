@@ -1,0 +1,9 @@
+{
+  "name": "com.vlc.opener",
+  "description": "Watch in VLC native messaging host",
+  "path": "C:\\Users\\Krieg\\Desktop\\vlc-extension\\vlc_host_wrapper.bat",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://jfglecipdegkahonklfplcpipijbpmih/"
+  ]
+}
